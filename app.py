@@ -36,7 +36,7 @@ app.layout = dbc.Container([
             dcc.Loading(
                 html.Div(
                     'Draw on the left side'
-                    , style={'width': dimension[0], 'height': dimension[1], 'color': 'gray'},className='border'),
+                    , style={'width': dimension[0], 'height': dimension[1], 'color': 'gray'}, className='border'),
                 id='fft-output',
             )
         )
@@ -80,6 +80,8 @@ def update_data(string):
     else:
         raise PreventUpdate
 
+
+server = app.server
 
 if __name__ == '__main__':
     app.run_server(debug=True)
