@@ -1,6 +1,6 @@
 import json
 import numpy as np
-import plotly.express as px
+# import plotly.express as px
 from scipy.fft import fft, ifft
 from dash_canvas.utils import array_to_data_url, parse_jsonstring
 import plotly.graph_objs as go
@@ -15,19 +15,19 @@ def get_line_cords(json_data, dimension=(500, 500)):
     return lines
 
 
-def plot_complex_pts(complex_pts, dimension=(500, 500)):
-    color = complex_pts['color']
-    complex_pts = complex_pts['pts']
-    x = complex_pts.real
-    y = dimension[1] - complex_pts.imag
-    fig = px.scatter(x=x, y=y)
-    fig.update_traces(marker=dict(color=color))
-    fig.update_layout(
-        autosize=False,
-        width=dimension[0],
-        height=dimension[1]
-    )
-    fig.show()
+# def plot_complex_pts(complex_pts, dimension=(500, 500)):
+#     color = complex_pts['color']
+#     complex_pts = complex_pts['pts']
+#     x = complex_pts.real
+#     y = dimension[1] - complex_pts.imag
+#     fig = px.scatter(x=x, y=y)
+#     fig.update_traces(marker=dict(color=color))
+#     fig.update_layout(
+#         autosize=False,
+#         width=dimension[0],
+#         height=dimension[1]
+#     )
+#     fig.show()
 
 
 def get_frames(ttl, dimension=(500, 500)):
